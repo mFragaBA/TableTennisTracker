@@ -10,7 +10,8 @@ defmodule TableTennisTracker.Application do
     children = [
       TableTennisTrackerWeb.Telemetry,
       TableTennisTracker.Repo,
-      {DNSCluster, query: Application.get_env(:table_tennis_tracker, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:table_tennis_tracker, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: TableTennisTracker.PubSub},
       # Start a worker by calling: TableTennisTracker.Worker.start_link(arg)
       # {TableTennisTracker.Worker, arg},
