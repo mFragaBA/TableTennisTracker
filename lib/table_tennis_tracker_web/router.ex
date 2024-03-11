@@ -19,7 +19,7 @@ defmodule TableTennisTrackerWeb.Router do
 
     get "/", PageController, :home
 
-    # live "/match_watcher", MatchWatcherLive
+    live "/match_watcher", MatchWatcherLive
     # live "/new_game", GameLive
   end
 

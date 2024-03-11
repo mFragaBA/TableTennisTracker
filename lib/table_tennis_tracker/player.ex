@@ -15,4 +15,8 @@ defmodule TableTennisTracker.Player do
     |> cast(attrs, [:alias, :ranking])
     |> validate_required([:alias, :ranking])
   end
+
+  def new_player(alias) do
+    %TableTennisTracker.Player{ alias: alias, ranking: 1000 }
+  end
 end
